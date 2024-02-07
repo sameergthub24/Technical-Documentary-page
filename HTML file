@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Autour+One&family=Bebas+Neue&family=Roboto+Condensed&family=Vast+Shadow&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="navhead">JavaScript Documentation</header>
+      <ul >
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        </li>
+        <li>
+          <a class="nav-link" href="#JavaScript_and_Java"
+            >JavaScript_and_Java</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Hello_world">Hello_world</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li>
+          <a class="nav-link" href="#Declaring_variables"
+            >Declaring_variables</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Events">Events</a></li>
+        <li>
+          <a class="nav-link" href="#Objects">Objects</a>
+        </li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_types">Data_types</a></li>
+        <li>
+          <a class="nav-link" href="#Conditionals_and_Loops"
+            >Conditionals_and_Loops</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Expressions_and_operators">Expressions_and_operators</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            JavaScript is a cross-platform, object-oriented scripting language.
+            It is a small and lightweight language. Inside a host environment
+            (for example, a web browser), JavaScript can be connected to the
+            objects of its environment to provide programmatic control over
+            them.
+          </p>
+
+          <p>
+            JavaScript contains a standard library of objects, such as Array,
+            Date, and Math, and a core set of language elements such as
+            operators, control structures, and statements. Core JavaScript can
+            be extended for a variety of purposes by supplementing it with
+            additional objects; for example:
+          </p>
+          <ul type="square">
+            <li>
+              Client-side JavaScript extends the core language by supplying
+              objects to control a browser and its Document Object Model (DOM).
+              For example, client-side extensions allow an application to place
+              elements on an HTML form and respond to user events such as mouse
+              clicks, form input, and page navigation.
+            </li>
+            <li>
+              Server-side JavaScript extends the core language by supplying
+              objects relevant to running JavaScript on a server. For example,
+              server-side extensions allow an application to communicate with a
+              database, provide continuity of information from one invocation to
+              another of the application, or perform file manipulations on a
+              server.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="JavaScript_and_Java">
+        <header>JavaScript_and_Java</header>
+        <article>
+          <p>
+            JavaScript and Java are similar in some ways but fundamentally
+            different in some others. The JavaScript language resembles Java but
+            does not have Java's static typing and strong type checking.
+            JavaScript follows most Java expression syntax, naming conventions
+            and basic control-flow constructs which was the reason why it was
+            renamed from LiveScript to JavaScript.
+          </p>
+          <p>
+            In contrast to Java's compile-time system of classes built by
+            declarations, JavaScript supports a runtime system based on a small
+            number of data types representing numeric, Boolean, and string
+            values. JavaScript has a prototype-based object model instead of the
+            more common class-based object model. The prototype-based model
+            provides dynamic inheritance; that is, what is inherited can vary
+            for individual objects. JavaScript also supports functions without
+            any special declarative requirements. Functions can be properties of
+            objects, executing as loosely typed methods.
+          </p>
+          <p>
+            JavaScript is a very free-form language compared to Java. You do not
+            have to declare all variables, classes, and methods. You do not have
+            to be concerned with whether methods are public, private, or
+            protected, and you do not have to implement interfaces. Variables,
+            parameters, and function return types are not explicitly typed.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_world">
+        <header>Hello_world</header>
+        <article>
+          <p>To get started with writing JavaScript, open the Scratchpad and write
+          your first "Hello world" JavaScript code:</p>
+          <code>function greetMe(yourName) { alert("Hello " + yourName); }
+            greetMe("World");
+          </code>
+          <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your
+          browser!</p>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>
+          You use variables as symbolic names for values in your application.
+          The names of variables, called identifiers, conform to certain rules.
+        </p>
+        <p>
+          A JavaScript identifier must start with a letter, underscore (_), or
+          dollar sign ($); subsequent characters can also be digits (0-9).
+          Because JavaScript is case sensitive, letters include the characters
+          "A" through "Z" (uppercase) and the characters "a" through "z"
+          (lowercase).
+        </p>
+        <p>
+          You can use ISO 8859-1 or Unicode letters such as å and ü in
+          identifiers. You can also use the Unicode escape sequences as
+          characters in identifiers. Some examples of legal names are
+          Number_hits, temp99, and _name.
+        </p>
+      </section>
+      <section class="main-section" id="Declaring_variables">
+        <header>Declaring_variables</header>
+        <article>
+          <p>You can declare a variable in three ways:</p>
+          <p>
+            With the keyword var. For example, <code>var x = 42.</code> This
+            syntax can be used to declare both local and global variables.
+          </p>
+          <p>
+            By simply assigning it a value. For example,
+            <code>x = 42.</code> This always declares a global variable. It
+            generates a strict JavaScript warning. You shouldn't use this
+            variant.
+          </p>
+          <p>
+            With the keyword let. For example,<code> let y = 13.</code> This
+            syntax can be used to declare a block scope local variable. See
+            Variable scope below.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Events">
+        <header>Events</header>
+        <article>
+         <p class="lb">Html Events</p>
+         <p>Events are things that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur.</p>
+         <p>HTML events are <span class="lb">"things"</span> that happen to HTML elements.
+
+When JavaScript is used in HTML pages, JavaScript can <span class="lb">"react"</span> on these events.</p>
+  <p>An HTML event can be something the browser does, or something a user does
+    <ul type="square">
+      <li>An HTML web page has finished loading</li>
+      <li>An HTML input field was changed</li>
+      <li>An HTML button was clicked</li>
+    </ul>
+    In the following example, an onclick attribute (with code), is added to a button element:
+  </p>
+    <code>onclick="document.getElementById('demo').innerHTML = Date()">The time is?</code>
+    <p>In the example above, the JavaScript code changes the content of the element with <span class="lb">id="demo"</span>.
+
+In the next example, the code changes the content of its own element (using <span class="lb">this.innerHTML</span>):</p>
+<code>onclick="this.innerHTML = Date()">The time is?</code>
+<p class="lb">Commom Html Events</p>
+<ul type="square">
+  <li>onchange &nbsp -- &nbsp	An HTML element has been changed</li>
+  <li>onclick &nbsp -- &nbsp The user clicks an HTML element </li>
+  <li>onmouseover &nbsp -- &nbsp The user moves the mouse over an HTML element</li>
+  <li>onmouseout &nbsp -- &nbsp The user moves the mouse away from an HTML element</li>
+  <li>onkeydown &nbsp -- &nbsp The user pushes a keyboard key</li>
+  <li>onload &nbsp -- &nbsp 	The browser has finished loading the page</li>
+  </ul> 
+  <p class="lb">addEventListener()</p>
+  <code>myElement.addEventListener("click", functionA);<br>
+myElement.addEventListener("click", functionB);</code>
+        </article>
+      </section>
+      <section class="main-section" id="Objects">
+        <header>Objects</header>
+        <article>
+          <p>A javaScript object is an entity having state and behavior (properties and method). For example: car, pen, bike, chair, glass, keyboard, monitor etc.
+
+JavaScript is an object-based language. Everything is an object in JavaScript.
+
+JavaScript is template based not class based. Here, we don't create class to get the object. But, we direct create objects.</p>
+<code>new Object(value)
+Object(value)
+let object_name = {
+    key_name : value,
+}</code>
+<code>NOTE:<br>Object()  can be called with or without new. Both create a new object.</code>
+        </article>
+      </section>
+      <section class="main-section" id="Constants">
+        <header>Constants</header>
+        <article>
+          <p>
+            You can create a read-only, named constant with the const keyword.
+            The syntax of a constant identifier is the same as for a variable
+            identifier: it must start with a letter, underscore or dollar sign
+            and can contain alphabetic, numeric, or underscore characters.
+          </p>
+
+          <code>const PI = 3.14;</code>
+          <p>
+            A constant cannot change value through assignment or be re-declared
+            while the script is running. It has to be initialized to a value.
+          </p>
+
+          <p>
+            The scope rules for constants are the same as those for let block
+            scope variables. If the const keyword is omitted, the identifier is
+            assumed to represent a variable.
+          </p>
+
+          <p>
+            You cannot declare a constant with the same name as a function or
+            variable in the same scope. For example:
+          </p>
+
+          <code
+            >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+            WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+            //statements }</code
+          >
+          <p>However, object attributes are not protected, so the following
+          statement is executed without problems.</p>
+          <code
+            >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+            "otherValue";</code
+          >
+        </article>
+      </section>
+      <section class="main-section" id="Data_types">
+        <header>Data_types</header>
+        <article>
+          <p>In programming, data types is an important concept.
+
+To be able to operate on variables, it is important to know something about the type.</p>
+<p class="lb">String:</p>
+<p>A string (or a text string) is a series of characters like "John Doe".
+
+Strings are written with quotes. You can use single or double quotes:</p>
+          <code>
+            NOTE: When adding a number and a string, JavaScript will treat the number as a string.
+           // Using double quotes:
+let carName1 = "Volvo XC60";
+
+// Using single quotes:
+let carName2 = 'Volvo XC60';
+          </code>
+          <p class="lb">Numbers:</p>
+          <p>All JavaScript numbers are stored as decimal numbers (floating point).
+
+Numbers can be written with, or without decimals:</p>
+<code> NOTE: Whole numbers (integers):
+byte (8-bit), short (16-bit), int (32-bit), long (64-bit)
+
+Real numbers (floating-point):
+float (32-bit), double (64-bit).
+
+Javascript numbers are always one type:
+double (64-bit floating point).
+
+// With decimals:
+let x1 = 34.00;
+
+// Without decimals:
+let x2 = 34;</code>
+<p class="lb">BigInt</p>
+<p>All JavaScript numbers are stored in a a 64-bit floating-point format.
+
+JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented by a normal JavaScript Number.</p>
+<code>let x = BigInt("123456789012345678901234567890");</code>
+<p class="lb">Booleans:</p>
+<p>Booleans can only have two values: true or false.</p>
+<code>let x = 5;
+let y = 5;
+let z = 6;
+(x == y)       // Returns true
+(x == z)       // Returns false</code>
+<p class="lb">Arrays</p>
+<p>JavaScript arrays are written with square brackets.
+
+Array items are separated by commas.
+
+The following code declares (creates) an array called cars, containing three items (car names):</p>
+<code>const cars = ["Saab", "Volvo", "BMW"];</code>
+<p class="lb">Objects</p>
+<p>JavaScript objects are written with curly braces {}.
+
+Object properties are written as name:value pairs, separated by commas.</p>
+<code>const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</code>
+        </article>
+      </section>
+      <section class="main-section" id="Conditionals_and_Loops">
+        <header>Conditionals_and_Loops</header>
+        <article>
+          <p>Use the if statement to execute a statement if a logical condition is
+          true. Use the optional else clause to execute a statement if the
+          condition is false. An if statement looks as follows:</p>
+
+          <code>if (condition) { statement_1; } else { statement_2; }</code>
+          <p>condition can be any expression that evaluates to true or false. See
+          Boolean for an explanation of what evaluates to true and false. If
+          condition evaluates to true, statement_1 is executed; otherwise,
+          statement_2 is executed. statement_1 and statement_2 can be any
+          statement, including further nested if statements.</p>
+          <p>
+            You may also compound the statements using else if to have multiple
+            conditions tested in sequence, as follows:
+          </p>
+          <code
+            >if (condition_1) { statement_1; } else if (condition_2) {
+            statement_2; } else if (condition_n) { statement_n; } else {
+            statement_last; }
+          </code>
+          <p>In the case of multiple conditions only the first logical condition
+          which evaluates to true will be executed. To execute multiple
+          statements, group them within a block statement ({ ... }) . In
+          general, it's good practice to always use block statements, especially
+          when nesting if statements:</p>
+
+          <code>if (condition) { statement_1_runs_if_condition_is_true;
+            statement_2_runs_if_condition_is_true; } else {
+            statement_3_runs_if_condition_is_false;
+            statement_4_runs_if_condition_is_false; }</code>
+          <p>It is advisable to not use simple assignments in a conditional
+          expression, because the assignment can be confused with equality when
+          glancing over the code. For example, do not use the following code:</p>
+          <code>if (x = y) { /* statements here */ }</code> 
+          <p>If you need to use
+          an assignment in a conditional expression, a common practice is to put
+          additional parentheses around the assignment. For example:</p>
+
+          <code>if ((x = y)) { /* statements here */ }</code><br>
+          <p class="lb">Loops:</p>
+            <p>Loops can execute a block of code a number of times.</p>
+            <p>Loops are handy, if you want to run the same code over and over again, each time with a different value.
+          </p>
+          <p>for - loops through a block of code a number of times
+            The for statement creates a loop with 3 optional expressions:</p>
+            <code>for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}</code>
+  <ul type="square"><li>Expression 1 is executed (one time) before the execution of the code block.</li>
+
+<li>Expression 2 defines the condition for executing the code block.</li>
+
+<li>Expression 3 is executed (every time) after the code block has been executed.</li></ul>
+<code> Example: <br>
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}</code>
+  <p>For/In and For/Of Loops:<br>
+  The JavaScript for in statement loops through the properties of an Object:</p>
+  <code>Syntax:<br>for (key in object) {
+  // code block to be executed
+}<br>Example:<br>const person = {fname:"John", lname:"Doe", age:25};
+let text = "";
+for (let x in person) {
+  text += person[x];
+}</code>
+  <ul type="square">
+    <p class="lb">Example Explained:</p>
+    <li>The for in loop iterates over a person object</li>
+    <li>Each iteration returns a key (x)
+</li>
+    <li>The key is used to access the value of the key</li>
+    <li>The value of the key is person[x]</li>
+  </ul>
+  <p class="lb">The For Of Loop</p>
+  <p>The JavaScript for of statement loops through the values of an iterable object.
+
+It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:</p>
+<code>const cars = ["BMW", "Volvo", "Mini"];
+let text = "";
+for (let x of cars) {
+  text += x;
+}</code><br>
+<p class="lb">While Loop</p>
+<p>The while loop loops through a block of code as long as a specified condition is true.</p>
+<code>while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}</code><br>
+<p class="lb">Do While Loop</p>
+<p>The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+<code>do {
+  text += "The number is " + i;
+  i++;
+}
+while (i < 10);</code>
+        </article>
+      </section>
+      <section class="main-section" id="Expressions_and_operators">
+        <header>Expressions_and_operators</header>
+        <article>
+         <p>This chapter describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
+
+At a high level, an expression is a valid unit of code that resolves to a value. There are two types of expressions: those that have side effects (such as assigning values) and those that purely evaluate.
+
+The expression x = 7 is an example of the first type. This expression uses the = operator to assign the value seven to the variable x. The expression itself evaluates to 7.
+
+As the examples above also illustrate, all complex expressions are joined by operators, such as = and +. In this section, we will introduce the following operators:</p>
+
+       <ul type="square" class="oplink">
+         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators" target="_blank">Assignment Operators</a></li>
+         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators">Comparison Operators</a></li>
+         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators" target="_blank">Arithmetic Operators</a></li>
+         <li><a href="https://www.geeksforgeeks.org/javascript-string-operators/" target="_blank">String Operators</a></li>
+         <li><a href="https://www.geeksforgeeks.org/javascript-course-logical-operators-in-javascript/" target="_blank">Logical Operators</a></li>
+         <li><a href="https://www.geeksforgeeks.org/javascript-bitwise-operators/" target="_blank">Bitwise Operators</a></li>
+         <li><a href="https://www.geeksforgeeks.org/javascript-ternary-operator/" target="_blank">Ternary Operators</a></li>
+       </ul>
+
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article >
+          <ul type="square">
+            <li>
+              All the content referred from  
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" class="refer"> MDN </a> <br> <a href="https://www.w3schools.com/js/" target="_blank" class="refer">W3school</a> <br> <a href="https://www.geeksforgeeks.org/javascript/" target="_blank" class="refer">geeksforgeeks</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
